@@ -13,6 +13,7 @@
 </head>
 <body>
     <h3 align="center" >客户列表</h3>
+    <div align="center">
     <table border="1" width="70%" align="center">
         <tr>
             <th>客户姓名</th>
@@ -36,8 +37,9 @@
         </tr>
         </c:forEach>
     </table>
+    </div>
 <br/>
-<center>
+<div align="center">
     第${pb.pc}页/共${pb.tp}页
     <a href="${pb.url}&pc=1">首页</a>
     <c:if test="${pb.pc>1}">
@@ -84,7 +86,7 @@
     </c:if>
     <a href="${pb.url}&pc=${pb.tp}">尾页</a>
 
-</center>
+</div>
 
 </body>
 </html>

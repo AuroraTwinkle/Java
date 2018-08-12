@@ -13,9 +13,10 @@
 </head>
 <body>
     <h3 align="center">高级搜索</h3>
+    <div align="center">
     <form action="<c:url value="/CustomerServlet"/>" method="get">
         <input type="hidden" name="method" value="query">
-        <table border="0" align="center" width="40%" style="margin-left: 100px">
+        <table border="0" align="center" width="30%" style="margin-left: 50px">
             <tr>
                 <td width="100px">客户名称</td>
                 <td width="40%">
@@ -55,6 +56,6 @@
 
         </table>
     </form>
-
+    </div>
 </body>
 </html>

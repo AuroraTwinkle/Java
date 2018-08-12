@@ -13,6 +13,7 @@
 </head>
 <body>
 <h3 align="center">添加客户</h3>
+<div align="center">
 <form action="<c:url value='/CustomerServlet'/>" method="post">
     <input type="hidden" name="method" value="add">
     <table border="0" align="center" width="40%" style="margin-left: 100px">
@@ -73,6 +74,6 @@
         </tr>
     </table>
 </form>
-
+</div>
 </body>
 </html>
