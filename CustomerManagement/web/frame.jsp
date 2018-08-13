@@ -10,7 +10,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>load_method</title>
+    <title>客户管理系统</title>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <style>
         *{margin: 0;padding: 0}
