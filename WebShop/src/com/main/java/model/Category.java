@@ -1,9 +1,6 @@
 package com.main.java.model;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
@@ -11,6 +8,17 @@ public class Category {
     private int id;
     private String type;
     private Byte hot;
+    private Account account;
+
+    public void setAccount(Account account) {
+        this.account = account;
+    }
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "aid")
+    public Account getAccount() {
+        return this.account;
+    }
 
     @Id
     @Column(name = "id", nullable = false)

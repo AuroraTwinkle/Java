@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <!-- 测试spring -->
-    <bean class="com.main.java.test.TestService" id="testService">
-        <property name="na" value="spring"></property>
-    </bean>
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- 使用注解自动注册bean -->
+    <context:component-scan base-package="com.main.java"/>
 
     <!-- data connection -->
     <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
@@ -39,13 +40,31 @@
             </list>
         </property>
     </bean>
-    <!-- hibernate测试 -->
-    <bean id="account" class="com.main.java.test.AccountsImpl">
-        <property name="sessionFactory" ref="sessionFactory"></property>
+
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
     </bean>
 
-    <bean id="accountsAction" class="com.main.java.test.AccountsAction">
-        <property name="accounts" ref="account"></property>
+
+    <tx:advice id="advice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="save*" propagation="REQUIRED"/>
+            <tx:method name="update*" propagation="REQUIRED"/>
+            <tx:method name="delete*" propagation="REQUIRED"/>
+            <tx:method name="*" propagation="SUPPORTS"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <aop:config>
+        <!-- 配置哪些包的类要切入事务 -->
+        <aop:pointcut id="pointcut" expression="execution(* com.main.java.service.Impl.*.*(..))" />
+        <aop:advisor advice-ref="advice" pointcut-ref="pointcut"/><!-- 连接了上面的advice和上面的pointcut -->
+        <!-- 出现一个很奇怪的问题，aop:pointcut要写在aop:advisor上面，否则会报错 -->
+    </aop:config>
+
+    <!--测试hibernate用-->
+    <bean id="address" class="com.main.java.test.AddressImpl">
+        <property name="sessionFactory" ref="sessionFactory"></property>
     </bean>
 
 </beans>

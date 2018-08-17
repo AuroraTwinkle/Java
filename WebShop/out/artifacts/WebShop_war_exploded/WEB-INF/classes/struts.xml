@@ -10,10 +10,38 @@
     <constant name="struts.objectFactory" value="spring" />
     <!-- 所有的action都应该放在对应的package下 -->
     <!--action的class属性不再是具体的类,而是spring配置文件配置的bean id-->
-    <package name="account" namespace="/account" extends="struts-default">
-        <action name="add" class="accountsAction" method="add">
-            <result name="success">/success.jsp</result>
+    <package name="shop" extends="struts-default">
+        <result-types>
+            <result-type name="json" class="org.apache.struts2.json.JSONResult"/>
+        </result-types>
+        <global-results>
+            <result name="aindex">/WEB-INF/main/aindex.jsp</result>
+        </global-results>
+
+
+        <!-- 用来完成系统 请求转发的action,所有的请求都交给execute-->
+        <action name="send_*_*" class="sendAction">
+            <result name="send">/WEB-INF/{1}/{2}.jsp</result>
+        </action>
+
+        <!-- class对应的是Spring中配置该Action的id值，因为要交给Spring管理 -->
+        <action name="category_*" class="categoryAction" method="{1}" >
+            <!-- 必须要先添加json包，然后上面继承json-default -->
+            <result name="jsonMap" type="json">
+                <!-- 要转换成json对象的数据 -->
+                <param name="root">pageMap</param>
+                <!-- 配置黑名单，过滤不需要的选项 ，支持正则表达式
+                json格式：{total:3,rows:[{account:{id:2,login:"user",name:"客服A",pass:"user"},hot:true,id:3,…}]}
+                -->
+                <param name="excludeProperties">
+                    <!-- rows[0].account.pass-->
+                    rows\[\d+\]\.account\.pass,
+                    rows\[\d+\]\.account\.name
+                </param>
+            </result>
+            <allowed-methods>queryJoinAccount</allowed-methods>
         </action>
     </package>
+
 
 </struts>
