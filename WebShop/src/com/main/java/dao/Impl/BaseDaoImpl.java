@@ -35,7 +35,7 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
     }
 
     @Override
-    public void add(T t){
+    public void save(T t){
         getSession().save(t);
     }
 
@@ -59,7 +59,7 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 
     @Override
     public List<T> query(){
-        String hql = "from"+clazz.getSimpleName();
+        String hql = "from "+clazz.getSimpleName();
         return getSession().createQuery(hql).list();
     }
 

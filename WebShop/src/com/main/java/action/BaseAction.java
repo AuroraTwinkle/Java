@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
 import javax.annotation.Resource;
+import java.io.InputStream;
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
 import java.util.Map;
@@ -25,6 +26,8 @@ public class BaseAction<T> extends ActionSupport implements RequestAware, Sessio
     //page和rows实现get和set方法，pageMap只需要实现get方法即可，因为pageMap不是接收前台参数的，是让struts获取的
     protected Integer page;
     protected Integer rows;
+    protected String ids;
+    protected InputStream inputStream;
     protected Map<String, Object> pageMap = null;
 
     @Resource
@@ -75,6 +78,11 @@ public class BaseAction<T> extends ActionSupport implements RequestAware, Sessio
 
 
     //get和set方法
+    public List<T> getJsonList() {
+        System.out.println("--getJsonList--");
+        return jsonList;
+    }
+
     public void setPage(Integer page) {
         this.page = page;
     }
@@ -89,6 +97,18 @@ public class BaseAction<T> extends ActionSupport implements RequestAware, Sessio
 
     public Integer getRows(){
         return rows;
+    }
+
+    public void setIds(String ids) {
+        this.ids = ids;
+    }
+
+    public String getIds(){
+        return ids;
+    }
+
+    public InputStream getInputStream(){
+        return inputStream;
     }
 
     public Map<String,Object> getPageMap(){

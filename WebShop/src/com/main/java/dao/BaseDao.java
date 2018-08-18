@@ -3,7 +3,7 @@ package com.main.java.dao;
 import java.util.List;
 
 public interface BaseDao<T> {
-    public void add(T t);
+    public void save(T t);
 
     public void update(T t);
 

@@ -57,8 +57,8 @@ public class BaseServiceImpl<T> implements BaseService<T> {
     protected UserDao userDao;
 
     @Override
-    public void add(T t){
-        baseDao.add(t);
+    public void save(T t){
+        baseDao.save(t);
     }
 
     @Override

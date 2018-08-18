@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 public class AccountAction extends BaseAction<Account> {
     public String query(){
         jsonList = accountService.query();
+        System.out.println(jsonList);
         return "jsonList";
     }
 }

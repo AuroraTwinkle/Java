@@ -1,9 +1,6 @@
 package com.main.java.model;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.Objects;
@@ -20,6 +17,8 @@ public class Product {
     private Byte commend;
     private Byte open;
 
+    private Category category;
+
     @Id
     @Column(name = "id", nullable = false)
     public int getId() {
@@ -28,6 +27,16 @@ public class Product {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "cid")
+    public Category getCategory(){
+        return this.category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     @Basic

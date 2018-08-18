@@ -39,7 +39,23 @@
                     rows\[\d+\]\.account\.name
                 </param>
             </result>
-            <allowed-methods>queryJoinAccount</allowed-methods>
+            <result name="stream" type="stream"> <!-- 以stream的形式，type为stream -->
+                <param name="inputName">inputStream</param> <!-- imputStream中有要传的数据 -->
+            </result>
+
+
+            <allowed-methods>queryJoinAccount,deleteByIds</allowed-methods>
+        </action>
+
+        <action name="account_*" class="accountAction" method="{1}">
+            <result name="jsonList" type="json">
+                <param name="root">jsonList</param>
+                <param name="excludeProperties">
+                    <!-- [0].pass, [1].pass -->
+                    \[\d+\]\.pass,\[\d+\]\.name
+                </param>
+            </result>
+            <allowed-methods>query</allowed-methods>
         </action>
     </package>
 
