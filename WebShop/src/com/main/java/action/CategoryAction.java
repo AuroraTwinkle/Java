@@ -4,6 +4,7 @@ import com.main.java.model.Category;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 
+import javax.print.DocFlavor;
 import java.io.ByteArrayInputStream;
 import java.util.HashMap;
 import java.util.List;
@@ -13,10 +14,17 @@ import java.util.List;
 @Scope("prototype")
 public class CategoryAction extends BaseAction<Category> {
 
+
     public void save(){
         System.out.println(model);
         categoryService.save(model);
 
+    }
+
+    public String update(){
+        System.out.println(model);
+        categoryService.update(model);
+        return "update";
     }
 
     public String queryJoinAccount(){

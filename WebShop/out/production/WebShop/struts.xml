@@ -44,7 +44,7 @@
             </result>
 
 
-            <allowed-methods>queryJoinAccount,deleteByIds</allowed-methods>
+            <allowed-methods>queryJoinAccount,deleteByIds,update</allowed-methods>
         </action>
 
         <action name="account_*" class="accountAction" method="{1}">

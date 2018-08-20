@@ -43,8 +43,7 @@
                 <param name="inputName">inputStream</param> <!-- imputStream中有要传的数据 -->
             </result>
 
-
-            <allowed-methods>queryJoinAccount,deleteByIds</allowed-methods>
+            <allowed-methods>queryJoinAccount,deleteByIds,update</allowed-methods>
         </action>
 
         <action name="account_*" class="accountAction" method="{1}">
