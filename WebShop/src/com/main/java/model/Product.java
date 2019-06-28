@@ -30,6 +30,20 @@ public class Product {
         this.id = id;
     }
 
+<<<<<<< Updated upstream
+=======
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "cid")
+    public Category getCategory(){
+        return this.category;
+    }
+
+
+>>>>>>> Stashed changes
     @Basic
     @Column(name = "name", nullable = true, length = 50)
     public String getName() {

@@ -15,7 +15,7 @@ import org.springframework.stereotype.Repository;
 @SuppressWarnings("unchecked")
 @Repository("baseDao")
 @Lazy(true)
-public class BaseDaoImpl<T> implements BaseDao<T> {
+public class BaseDaoImpl<T>  implements BaseDao<T> {
     private Class clazz;
 
     @Resource

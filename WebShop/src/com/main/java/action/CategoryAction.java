@@ -27,4 +27,22 @@ public class CategoryAction extends BaseAction<Category> {
 
         return "jsonMap";
     }
+<<<<<<< Updated upstream
+=======
+
+    public String deleteByIds(){
+        System.out.println(ids);
+        categoryService.deleteByIds(ids);
+        inputStream = new ByteArrayInputStream("true".getBytes()); //将"true"的字节存到流inputStream中
+        return "stream";
+
+    }
+
+    public String query() {
+        jsonList = categoryService.query();
+        return "jsonList";
+    }
+
+
+>>>>>>> Stashed changes
 }

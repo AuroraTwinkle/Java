@@ -1,6 +1,9 @@
 package com.main.java.model;
 
+import org.apache.struts2.json.annotations.JSON;
+
 import javax.persistence.*;
+import javax.persistence.criteria.Join;
 import java.util.Objects;
 
 @Entity
@@ -14,7 +17,8 @@ public class Category {
         this.account = account;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "aid")
     public Account getAccount() {
         return this.account;

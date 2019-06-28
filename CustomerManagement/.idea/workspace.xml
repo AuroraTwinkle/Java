@@ -7,9 +7,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="328f62e8-bc53-4024-a21c-56c06f6f9257" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CustomerManagement_war_exploded/frame.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CustomerManagement_war_exploded/frame.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/frame.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/frame.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/out/artifacts/WebShop_war_exploded/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/out/artifacts/WebShop_war_exploded/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/out/artifacts/WebShop_war_exploded/WEB-INF/classes/com/main/java/action/AccountAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/out/artifacts/WebShop_war_exploded/WEB-INF/classes/com/main/java/action/AccountAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/out/artifacts/WebShop_war_exploded/WEB-INF/classes/com/main/java/action/BaseAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/out/artifacts/WebShop_war_exploded/WEB-INF/classes/com/main/java/action/BaseAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/out/artifacts/WebShop_war_exploded/WEB-INF/classes/com/main/java/action/CategoryAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/out/artifacts/WebShop_war_exploded/WEB-INF/classes/com/main/java/action/CategoryAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/out/artifacts/WebShop_war_exploded/WEB-INF/classes/com/main/java/model/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/out/artifacts/WebShop_war_exploded/WEB-INF/classes/com/main/java/model/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/out/artifacts/WebShop_war_exploded/WEB-INF/classes/com/main/java/model/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/out/artifacts/WebShop_war_exploded/WEB-INF/classes/com/main/java/model/Category.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/out/artifacts/WebShop_war_exploded/WEB-INF/classes/com/main/java/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/out/artifacts/WebShop_war_exploded/WEB-INF/classes/com/main/java/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/out/artifacts/WebShop_war_exploded/WEB-INF/classes/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/out/artifacts/WebShop_war_exploded/WEB-INF/classes/struts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/out/artifacts/WebShop_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/out/artifacts/WebShop_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/out/production/WebShop/com/main/java/action/AccountAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/out/production/WebShop/com/main/java/action/AccountAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/out/production/WebShop/com/main/java/action/BaseAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/out/production/WebShop/com/main/java/action/BaseAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/out/production/WebShop/com/main/java/action/CategoryAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/out/production/WebShop/com/main/java/action/CategoryAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/out/production/WebShop/com/main/java/model/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/out/production/WebShop/com/main/java/model/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/out/production/WebShop/com/main/java/model/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/out/production/WebShop/com/main/java/model/Category.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/out/production/WebShop/com/main/java/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/out/production/WebShop/com/main/java/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/out/production/WebShop/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/out/production/WebShop/struts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/src/com/main/java/action/AccountAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/src/com/main/java/action/AccountAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/src/com/main/java/action/BaseAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/src/com/main/java/action/BaseAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/src/com/main/java/action/CategoryAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/src/com/main/java/action/CategoryAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/src/com/main/java/dao/Impl/BaseDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/src/com/main/java/dao/Impl/BaseDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/src/com/main/java/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/src/com/main/java/model/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/src/com/main/java/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/src/com/main/java/model/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/src/com/main/java/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/src/com/main/java/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/src/struts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/src/struts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/web/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/web/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../WebShop/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../WebShop/web/WEB-INF/web.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,9 +45,10 @@
     <session id="427197461">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -43,7 +67,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/frame.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
+            <state relative-caret-position="-67">
               <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
             </state>
           </provider>
@@ -178,6 +202,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -212,8 +238,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -355,16 +379,17 @@
       <workItem from="1534054193260" duration="8351000" />
       <workItem from="1534086758042" duration="10000" />
       <workItem from="1534136318185" duration="62000" />
+      <workItem from="1556700718615" duration="76000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14684000" />
+    <option name="totallyTimeSpent" value="14760000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27345845" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2774799" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -532,7 +557,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/frame.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
+        <state relative-caret-position="-67">
           <caret line="13" column="48" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
         </state>
       </provider>

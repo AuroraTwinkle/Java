@@ -39,9 +39,6 @@
                     rows\[\d+\]\.account\.name
                 </param>
             </result>
-<<<<<<< Updated upstream
-            <allowed-methods>queryJoinAccount</allowed-methods>
-=======
 
             <result name="jsonList" type="json">
                 <param name="root">jsonList</param>
@@ -66,7 +63,6 @@
                 </param>
             </result>
             <allowed-methods>query</allowed-methods>
->>>>>>> Stashed changes
         </action>
 
         <action name="product_*" class="productAction" method="{1}">

@@ -13,6 +13,12 @@ public class Account {
     private String name;
     private String pass;
 
+    @Override
+    public String toString() {
+        return "Account [id=" + id + ", login=" + login + ", name=" + name
+                + ", pass=" + pass + "]";
+    }
+
     @Id
     @Column(name = "id", nullable = false)
     public int getId() {

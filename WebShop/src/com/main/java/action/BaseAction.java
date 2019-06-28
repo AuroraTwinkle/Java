@@ -1,7 +1,9 @@
 package com.main.java.action;
 
 
+import com.main.java.model.FileImage;
 import com.main.java.service.*;
+import com.main.java.utils.FileUpload;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 import org.apache.struts2.interceptor.ApplicationAware;
@@ -18,6 +20,9 @@ import java.util.Map;
 @Controller("baseAction")
 @Scope("prototype")
 public class BaseAction<T> extends ActionSupport implements RequestAware, SessionAware, ApplicationAware, ModelDriven<T> {
+
+    //图片信息类
+    protected FileImage fileImage;
 
     protected List<T> jsonList = null;
 
@@ -39,6 +44,9 @@ public class BaseAction<T> extends ActionSupport implements RequestAware, Sessio
     protected ForderService forderService;
     @Resource
     protected UserService userService;
+
+    //上传文件工具类
+    protected FileUpload fileUpload;
 
     protected Map<String,Object> request;
     protected Map<String,Object> session;
@@ -75,6 +83,22 @@ public class BaseAction<T> extends ActionSupport implements RequestAware, Sessio
 
 
     //get和set方法
+<<<<<<< Updated upstream
+=======
+    public List<T> getJsonList() {
+        System.out.println("--getJsonList--");
+        return jsonList;
+    }
+
+    public FileImage getFileImage(){
+        return fileImage;
+    }
+
+    public void setFileImage(FileImage fileImage){
+        this.fileImage = fileImage;
+    }
+
+>>>>>>> Stashed changes
     public void setPage(Integer page) {
         this.page = page;
     }
