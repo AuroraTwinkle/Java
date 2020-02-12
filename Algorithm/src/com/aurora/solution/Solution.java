@@ -1,8 +1,8 @@
 package com.aurora.solution;
 
 import javax.swing.*;
-import java.util.ArrayDeque;
-import java.util.Deque;
+import java.util.*;
+
 class TreeNode {
     int val = 0;
     TreeNode left = null;
@@ -16,12 +16,51 @@ class TreeNode {
 class ListNode {
     int val;
     ListNode next = null;
-
     ListNode(int val) {
         this.val = val;
     }
 }
 public class Solution {
+    public ArrayList<Integer> printMatrix(int [][] matrix) {
+        ArrayList<Integer> array=new ArrayList<>();
+        int row=matrix.length;
+        int col=matrix[0].length;
+        int turns= Math.min(row,col);
+        for(int i=0;i<Math.ceil(turns/2.0);i++){
+            for(int j=i;j<col-i;j++){
+                array.add(matrix[i][j]);
+            }
+            for(int k=i+1;k<row-i;k++){
+                array.add(matrix[k][col-1-i]);
+            }
+            for(int j=col-2-i;j>=i&&(row-i-1!=i);j--){
+                array.add(matrix[row-1-i][j]);
+            }
+            for(int k=row-i-2;k>i&&(col-i-1!=i);k--){
+                array.add(matrix[k][i]);
+            }
+        }
+        return array;
+    }
+    public void Mirror(TreeNode root) {
+        if(root==null){
+            return;
+        }
+        Deque<TreeNode> stack=new LinkedList<>();
+        stack.push(root);
+        while (!stack.isEmpty()){
+            TreeNode treeNode=stack.pop();
+            TreeNode tmp=treeNode.left;
+            treeNode.left=treeNode.right;
+            treeNode.right=tmp;
+            if(treeNode.left!=null){
+                stack.push(treeNode.left);
+            }
+            if(treeNode.right!=null){
+                stack.push(treeNode.right);
+            }
+        }
+    }
     private boolean isSubTree(TreeNode t1,TreeNode t2){
         if(t2==null){
             return true;

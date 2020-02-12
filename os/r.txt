@@ -1,0 +1,23 @@
+init
+cr x 1
+cr p 1
+cr q 1
+cr r 1
+list ready
+to
+req 2 1
+to
+req 3 3
+to
+req 4 3
+list res
+to
+to
+req 3 1
+req 4 2
+req 2 2
+list block
+to
+de q
+to
+to
