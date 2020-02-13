@@ -10,10 +10,11 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://F:/IDM下载/Compressed/commons-logging-1.2-bin/commons-logging-1.2/commons-logging-1.2.jar!/" />
+          <root url="file://$USER_HOME$/Downloads/JavaJar" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
+        <jarDirectory url="file://$USER_HOME$/Downloads/JavaJar" recursive="false" />
       </library>
     </orderEntry>
   </component>

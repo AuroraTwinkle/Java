@@ -3,8 +3,7 @@ import com.aurora.person.Person;
 import com.aurora.person.Student;
 import com.aurora.solution.Solution;
 import com.aurora.test.Test;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+
 
 import java.beans.BeanInfo;
 import java.beans.IntrospectionException;
@@ -22,14 +21,10 @@ import java.util.logging.Logger;
 
 public class Main {
     public static void main(String[] args)  {
-        Log log= LogFactory.getLog(Main.class);
-        int[] arr={2,4,6,1,3,5,7};
+        int[] arr={2,-45,-4,6,-8,-6,1,3,-4,5,7};
         Solution solution=new Solution();
-        solution.reOrderArray(arr);
-        log.info(solution.JumpFloor(3));
-        log.info(solution.JumpFloorII(3));
-        log.info(solution.NumberOf1(-5));
-        log.info(solution.Power(2,10));
+//        solution.reOrderArray(arr);
+        System.out.println(solution.FindGreatestSumOfSubArray(arr));
 //        for(String it:args){
 //            if("-version".equals(it)){
 //                System.out.println("version-1-1");
