@@ -1,4 +1,5 @@
 package com.aurora.person;
+
 import com.aurora.person.Person;
 import com.aurora.person.Student;
 import com.aurora.solution.Solution;
@@ -9,22 +10,78 @@ import java.beans.BeanInfo;
 import java.beans.IntrospectionException;
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
+import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.RoundingMode;
-import java.util.Arrays;
-import java.util.Random;
 import java.util.logging.Logger;
+import java.util.*;
+
 
 public class Main {
-    public static void main(String[] args)  {
-        int[] arr={2,-45,-4,6,-8,-6,1,3,-4,5,7};
-        Solution solution=new Solution();
-//        solution.reOrderArray(arr);
-        System.out.println(solution.FindGreatestSumOfSubArray(arr));
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        scanner.nextLine();
+        for (int i = 0; i < n; i++) {
+            String str = scanner.nextLine();
+            System.out.println(fixString(str));
+        }
+
+    }
+
+    public static String fixString(String string) {
+        char[] chars = string.toCharArray();
+        int j = 0;
+        for (int i = 0; i < string.length(); i++) {
+            chars[j++] = chars[i];
+            if (j >= 3 && chars[j - 1] == chars[j - 2] && chars[j - 2] == chars[j - 3]) {
+                j--;
+            }
+            if (j >= 4 && chars[j - 1] == chars[j - 2] && chars[j - 3] == chars[j - 4]) {
+                j--;
+            }
+        }
+        String str = new String(chars);
+        return str.substring(0, j);
+    }
+
+    public static void sortArray(Integer[] array, int low, int high) {
+        if (array.length <= 0) {
+            return;
+        }
+        if (low < high) {
+            int mid = getMid(array, low, high);
+            sortArray(array, 0, mid - 1);
+            sortArray(array, mid + 1, high);
+        }
+
+    }
+
+    public static int getMid(Integer[] array, int low, int high) {
+        int tmp = array[low];
+        while (low < high) {
+            while (array[high] >= tmp && low < high) {
+                high--;
+            }
+            array[low] = array[high];
+            while (low < high && array[low] <= tmp) {
+                low++;
+            }
+            array[high] = array[low];
+        }
+        array[low] = tmp;
+        return low;
+    }
+}
+
+//        int[] arr={2,-45,-4,6,-8,-6,1,3,-4,5,7};
+//        Solution solution=new Solution();
+////        solution.reOrderArray(arr);
+//        System.out.println(solution.FindGreatestSumOfSubArray(arr));
 //        for(String it:args){
 //            if("-version".equals(it)){
 //                System.out.println("version-1-1");
@@ -96,5 +153,3 @@ public class Main {
 //        String name=scanner.nextLine();
 //        double money=scanner.nextDouble();
 //        System.out.printf("name=%s,money=%.5f",name,money);
-    }
-}

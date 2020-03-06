@@ -38,6 +38,21 @@ public class Solution {
     ArrayList<ArrayList<Integer>> resultLists = new ArrayList<>();
     ArrayList<Integer> arrayList = new ArrayList<>();
 
+    public int getWaterButtons(int n){
+        if(n<3){
+            return 0;
+        }
+        int count=n/3;
+        int empty=count+n%3;
+        for(;empty>=2;empty=empty/3+empty%3){
+            if(empty==2){
+                count+=1;
+                break;
+            }
+            count+=empty/3;
+        }
+        return count;
+    }
     public int NumberOf1Between1AndN_Solution(int n) {
         int count = 0;
         if(n<=0){
