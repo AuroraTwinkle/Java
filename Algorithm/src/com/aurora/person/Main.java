@@ -403,7 +403,7 @@ public class Main {
 //        }
 //    }
 //}
-// public static int getMinBoxes(int []array){
+// public static int getMinBox(int []array){
 //        Map<Integer,Integer> map=new HashMap<>();
 //        for (int value : array) {
 //            if (map.containsKey(value)) {
