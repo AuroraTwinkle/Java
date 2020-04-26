@@ -25,10 +25,10 @@ import java.util.regex.Pattern;
 
 public class Main {
     public static class Node{
-        int val;
+        int values;
         Node next;
         Node(int val){
-            this.val=val;
+            this.values=val;
             this.next=null;
         }
     }
