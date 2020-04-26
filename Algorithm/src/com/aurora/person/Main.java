@@ -22,13 +22,12 @@ import java.util.logging.Logger;
 import java.util.*;
 import java.util.regex.Pattern;
 
-
 public class Main {
     public static class Node{
-        int val;
+        int value;
         Node next;
         Node(int val){
-            this.val=val;
+            this.value=val;
             this.next=null;
         }
     }
